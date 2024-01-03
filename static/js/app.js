@@ -11,12 +11,10 @@ function init() {
                 .property("value", sample);
         });
 
-        // Use the first sample from the list to build the initial plots
+        // initial plots using first sample data
         const firstSample = sampleNames[0];
         buildCharts(firstSample);
         buildMetadata(firstSample);
-        // Optional: If gauge chart is part of your assignment
-        // buildGaugeChart(firstSample); // Uncomment if gauge chart is needed
     });
 }
 
@@ -82,8 +80,6 @@ function buildMetadata(sample) {
 function optionChanged(newSample) {
     buildCharts(newSample);
     buildMetadata(newSample);
-    // Optional: If gauge chart is part of your assignment
-    // buildGaugeChart(newSample); // Uncomment if gauge chart is needed
 }
 
 // Initialize the dashboard
